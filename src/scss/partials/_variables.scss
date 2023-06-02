@@ -1,0 +1,133 @@
+@use "sass:math";
+$color-header-background: #F7F7F7;
+
+
+
+
+
+$color-text-h1: #e2e2e2;
+$color-footer-background-color: #f0f0f0;
+$color-href-link: #393939;
+$primary-color: #243040;
+
+$color-grey: #e6e8ee;
+$color-wild-sand: #F5F5F5;
+$color-acquered-liquorice: #383838;
+$color-soft-blue: #648DE5;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-mercury: #E8E8E8;
+
+
+
+
+// ==================wood color=====================
+$color-cherry: #b68759;
+$color-oak:#b68759;
+$color-wenge:#83563e;
+$color-wenge2:#8c5335;
+$color-walnut:#654321;
+$color-walnut2:#6e4318;
+$color-dark-cherry: #45322e;
+$color-wenge-oak: #48302b;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- =============== Defalt need css ===============
+$debug: false; // при работе в состоянии разработки и при использовании конструкции if
+// @if ($debug) { border: 1px dotted red;} // визуализация внутренних элементов разметки
+
+$max-width-content: 95vw !default;// параметры по умолчанию
+$title__font-size: 26px !default;
+
+// ======================size of elements================
+$header-desktop__max-height:80px;
+$header-mobile__max-height:64px;
+$footer-max-height:261px;
+
+$pad-top-el:30px;
+$pad-bottom-el:20px;
+
+$box-shadow: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.12));
+
+// ================fonts===================
+$font-size-standard: 16px;
+$font-family: 'Inter', sans-serif;
+
+// =============== size width or screen view===============
+// нижний и верхний порог lower threshold upper threshold
+
+$width__pc:1280px;//PC.
+
+$width__laptop_upper:1279px;
+$width__laptop_lower:1024px;//Планшеты (альбомная ориентация)/Нетбуки;
+
+$width__tablet_upper:1023px;
+$width__tablet_lower:768px;//Планшеты (портретная ориентация);
+
+
+$width__tablet__mini_upper:767px;
+$width__tablet__mini_lower:600px;//Небольшие планшеты;
+
+$width__phone_upper:599px;
+$width__phone_lower:416px;//Мобильные устройства (альбомная ориентация);
+
+$width__phone__small_upper:415px;
+$width__phone__small_lower:320px; //Мобильные устройства (портретная ориентация);
+
+// =======================media grоup ============================
+@media  screen, print, (min-width: #{width__pc}) {
+$max-width-content:calc(100vw - 80px);
+$title__font-size: 42px;
+};
+
+@media screen and (min-width: #{width__laptop_lower}) and (max-width: #{width__laptop_upper}) {
+  $max-width-content:calc(100vw - 60px);
+  $title__font-size: 38px;
+};
+
+@media screen and (min-width: #{width__tablet_lower}) and (max-width: #{width__tablet_upper}) {
+  $max-width-content:calc(100vw - 40px);
+  $title__font-size: 34px;
+};
+@media screen  and (min-width: #{width__tablet_lower}) {
+  $isMomile:0;
+
+  }
+//==================modile version=====================
+
+@media screen  and (max-width: #{width__tablet__mini_upper}) {
+$isMomile:1;
+
+}
+@media screen and (min-width: #{width__tablet__mini_lower}) and (max-width: #{width__tablet__mini_upper}) {
+  $max-width-content:calc(100vw - 30px);
+  $title__font-size: 32px;
+};
+
+@media screen and (min-width: #{width__phone_lower}) and (max-width: #{width__phone_upper}) {
+  $max-width-content:calc(100vw - 20px);
+  $title__font-size: 30px;
+};
+
+@media screen and (max-width:#{width__phone__small_lower}) {
+  $max-width-content:calc(100vw - 10px);
+  $title__font-size: 26px;
+};
+
+

@@ -1,0 +1,28 @@
+include ../mixins/baseHeader
+block vars
+doctype html
+//
+	░▒▓█ █▓▒░
+	░▒█☻ ☻█▒░
+	░▒▓█ █▓▒░
+html(lang='ru')
+	head
+		+metaLink
+		+linkBase
+		block meta
+			//- meta(name='description' content='Производство мебели из натурального дерева')
+		block title
+
+		block links
+
+		block styles
+
+		block script
+
+		script(async, defer, type='module', src='js/app.js')
+	body
+		main.main
+			include ../partials/header
+			.content-wrap
+				block content
+			include ../partials/footer

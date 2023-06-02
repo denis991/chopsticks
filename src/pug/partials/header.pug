@@ -1,0 +1,19 @@
+.header
+	.header__logo
+		a(href='/')
+			include ../../img/kfpD.svg
+			//- img(src='./img/kfpD.svg' alt='Logo')
+	.header_title
+		|Производственная компания
+		br
+		|деревянных палочек для еды
+	.header_link(href='#')
+		.mobile
+			.container-button_open
+				.icon
+					img(src='/img/menu-icon.svg' width='20px' height='20px' alt='Menu switcher')
+				include ./contactUs
+		.desktop
+			include ./contactUs
+
+

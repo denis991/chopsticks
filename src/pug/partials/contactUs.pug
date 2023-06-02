@@ -1,0 +1,20 @@
+.f__container
+    .cen.f__col
+      .line-of-control
+      .title_x(field='title') Свяжитесь с нами
+      #contact.text_m(field='text')
+        //- a.phone-number(itemprop='telephone', href='tel:+7(918)24-75-75756')
+        //-   | +7(918)24-75-75756
+        //-   br
+        a.container-mail(href='mailto:sale@fabrika-palochek.ru')
+          | sale@fabrika-palochek.ru
+          br
+      .f__sociallinks
+        .f__sociallinks_wrapper
+          .f__sociallinks_item
+            a(href='https://t.me/d9911', target='_blank')
+                  include ../../img/telegram.svg
+          .f__sociallinks_item
+            a(href='https://wa.me/79182475756', target='_blank')
+              include ../../img/whatsApp.svg
+
