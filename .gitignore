@@ -1,0 +1,17 @@
+.idea
+.vscode
+.env
+.DS_Store
+**/.DS_Store
+/node_modules
+/public/build
+
+
+# Local env files
+TZ.md
+gulp
+gulpfile.js
+src/js/modules/functions.js
+package-lock.json
+
+/src/*
