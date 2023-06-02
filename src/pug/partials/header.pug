@@ -8,12 +8,15 @@
 		br
 		|деревянных палочек для еды
 	.header_link(href='#')
-		.mobile
+		.mobile(hidden)
 			.container-button_open
+				//- .button-opening
 				.icon
 					img(src='/img/menu-icon.svg' width='20px' height='20px' alt='Menu switcher')
+			.header__mobile-modal
 				include ./contactUs
-		.desktop
+				.header__dropdown_background
+		.desktop(hidden)
 			include ./contactUs
 
 

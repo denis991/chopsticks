@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://*****/sitemap.xml
+Sitemap: http://www.chopsticks.ru/sitemap.xml

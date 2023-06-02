@@ -1,0 +1,20 @@
+@function convertPixelsToRem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@function getLineHeight($lineHeightPx, $fontPx) {
+  $lineHeightValue: calc($lineHeightPx / $fontPx);
+  @return $lineHeightValue;
+}
+
+@function responsiveValue($min-resolution, $max-resolution, $px-value, $vh-value) {
+  $min-resolution-px: $min-resolution * 16; // Преобразуем минимальное разрешение в пиксели
+  $max-resolution-px: $max-resolution * 16; // Преобразуем максимальное разрешение в пиксели
+
+  @if ($min-resolution-px > $max-resolution-px) {
+    @return #{$px-value}px;
+  } @else {
+    @return #{$vh-value}vh;
+  }
+}

@@ -1,20 +1,36 @@
-.f__container
-    .cen.f__col
-      .line-of-control
-      .title_x(field='title') Свяжитесь с нами
-      #contact.text_m(field='text')
-        //- a.phone-number(itemprop='telephone', href='tel:+7(918)24-75-75756')
-        //-   | +7(918)24-75-75756
-        //-   br
-        a.container-mail(href='mailto:sale@fabrika-palochek.ru')
-          | sale@fabrika-palochek.ru
-          br
-      .f__sociallinks
-        .f__sociallinks_wrapper
-          .f__sociallinks_item
-            a(href='https://t.me/d9911', target='_blank')
-                  include ../../img/telegram.svg
-          .f__sociallinks_item
-            a(href='https://wa.me/79182475756', target='_blank')
-              include ../../img/whatsApp.svg
+.contact
+		.button-close
+		.contact__container
+			.contact__center
+				.contact__efficiency(field='title')
+					.contact__efficiency_icon
+						include ../../img/watch.svg
+					.contact__efficiency_text
+						| Заявки
+						br
+						| принимаем
+						br
+						| 24 часа
+						br
+				#contact.contact_data(field='text')
+					a.contact__mail(href='mailto:sale@fabrika-palochek.ru')
+						| sale@fabrika-palochek.ru
+						br
+					a.contact__phone-number(itemprop='telephone', href='tel:+7(910)371-28-09')
+						| +7 (910) 371-28-09
+						br
+					a.contact_time
+						| Режим работы
+						br
+						| с 9:00 до 18:00
+						br
+				.contact__sociallinks
+					.contact__sociallinks_wrapper
+						.contact__sociallinks_item
+							a(href='https://t.me/d9911', target='_blank')
+								include ../../img/telegram.svg
+						.contact__sociallinks_item
+							a(href='https://wa.me/79182475756', target='_blank')
+								include ../../img/whatsApp.svg
+
 
