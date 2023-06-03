@@ -1,0 +1,137 @@
+.footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+
+	&-item {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 180%;
+		grid-column: span 2;
+	}
+
+	&-info {
+		grid-column: 1 / -1;
+	}
+	&__vector {
+		background: $color-green;
+		border: 2px solid #ffffff;
+	}
+}
+
+
+// /* Footer */
+// .footer {
+// 	position: absolute;
+// 	width: 1920px;
+// 	height: 172px;
+// 	left: 0px;
+// 	top: 3050px;
+
+// 	/* Rectangle 4 */
+// 	&__rectangle {
+// 		position: absolute;
+// 		width: 1920px;
+// 		height: 172px;
+// 		left: 0px;
+// 		top: 3050px;
+
+// 		background: #374146;
+// 		border-radius: 100px 100px 0px 0px;
+// 	}
+
+// 	/* Приведенная выше информация носит справочный характер и не является публичной офертой. Подробную информацию уточняйте в отделе продаж. */
+// 	&__info {
+// 		position: absolute;
+// 		width: 709px;
+// 		height: 66px;
+// 		left: 968px;
+// 		top: 3145px;
+
+// 		font-family: 'Montserrat';
+// 		font-style: normal;
+// 		font-weight: 400;
+// 		font-size: 12px;
+// 		line-height: 180%;
+// 		/* or 22px */
+// 		text-align: right;
+
+// 		color: #ffffff;
+// 	}
+
+// 	/* Отправляя форму, вы даете согласие на обработку своих персональных данных и соглашаетесь с политикой конфиденциальности */
+// 	&__form-consent {
+// 		position: absolute;
+// 		width: 621px;
+// 		height: 44px;
+// 		left: 250px;
+// 		top: 3145px;
+
+// 		font-family: 'Montserrat';
+// 		font-style: normal;
+// 		font-weight: 400;
+// 		font-size: 12px;
+// 		line-height: 180%;
+// 		/* or 22px */
+
+// 		color: #ffffff;
+// 	}
+
+// 	/* Group 22 */
+// 	&__group-22 {
+// 		position: absolute;
+// 		width: 30px;
+// 		height: 29.12px;
+// 		left: 600px;
+// 		top: 3089px;
+// 	}
+
+// 	/* W-UP Back fill */
+// 	&__w-up-fill {
+// 		position: absolute;
+// 		width: 20.29px;
+// 		height: 18.09px;
+// 		left: 604.85px;
+// 		top: 3093.41px;
+
+// 		background: #ffffff;
+// 	}
+
+// 	/* Vector */
+// 	&__vector {
+// 		position: absolute;
+// 		width: 30px;
+// 		height: 29.12px;
+// 		left: 600px;
+// 		top: 3089px;
+
+// 		background: #0db92c;
+// 		border: 2px solid #ffffff;
+// 	}
+
+// 	/* Group 21 */
+// 	&__group-21 {
+// 		position: absolute;
+// 		width: 33.26px;
+// 		height: 33px;
+// 		left: 555px;
+// 		top: 3087px;
+// 	}
+
+// 	/* TG Back fill */
+// 	&__tg-fill {
+// 		position: absolute;
+// 		width: 22.5px;
+// 		height: 22.5px;
+// 		left: 558.5px;
+// 		top: 3092px;
+
+// 		background: #ffffff;
+// 	}
+
+// 	/* TG */
+// 	&__tg {
+// 		position: absolute;
+// 		width: 33.26;
+// 	}
+// }

@@ -1,9 +1,118 @@
-.main{
-	min-height: 584px;
-	background: url("../img/main-chopsticks.png") 0 0 no-repeat ;
+.main {
+	// min-height: 584px;
+	// background: url("../img/main-chopsticks.png") 0 0 no-repeat ;
+	&__background {
+	}
+
+	&__title {
+		&_text {
+			font-weight: 600;
+			font-size: 90px;
+			line-height: 120px;
+			color: $color-acquered-liquorice;
+		}
+		.eco {
+			white-space: nowrap;
+		}
+		&_img {
+		}
+	}
+
+	&__request {
+		&_input {
+			max-width: 290px;
+		}
+		&_input ~ label {
+
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 180%;
+		}
+		& input {
+			&#nam {
+			}
+
+			&#phone {
+			}
+		}
+
+		& button {
+			&#request {
+			}
+		}
+	}
+}
+@media screen and (max-width: $width__phone_upper) {
+	.main {
+		&__background {
+		}
+
+		&__title {
+			&_text {
+			}
+			.eco {
+				white-space: nowrap;
+			}
+			&_img {
+			}
+		}
+
+		&__request {
+			&_input {
+			}
+			& input {
+				&#nam {
+				}
+
+				&#phone {
+				}
+			}
+
+			& button {
+				&#request {
+				}
+			}
+		}
+	}
 }
 
-// .content{
+.input-field {
 
-// }
-// .content_h1{}
+
+	box-sizing: border-box;
+	position: relative;
+
+	input {
+		width: 398px; // 290px
+		height: 50px;
+		border-radius: 50px;
+		font-size: 18px;
+		padding: 0 15px;
+		border: 2px solid $color-acquered-liquorice;
+		background: transparent;
+		color: $color-acquered-liquorice;
+		outline: none;
+	}
+	label {
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		transform: translateY(-50%);
+		color: $color-acquered-liquorice;
+		font-size: 19px;
+		pointer-events: none;
+		transition: 0.3s;
+	}
+	input:focus {
+		border: 2px solid $color-green;
+	}
+	input:focus ~ label,
+	input:valid ~ label {
+		font-family: 'Poppins', sans-serif;
+		top: 0;
+		left: 15px;
+		font-size: 16px;
+		padding: 0 2px;
+		background: $color-white;
+	}
+}

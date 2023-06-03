@@ -1,4 +1,21 @@
 .main
-	.content_background
-	.content_h1
-	.content_request
+	.main__background
+	.main__title
+		.main__title_text
+			| Палочки для еды
+			| в брендированной
+			| эко-упаковк
+			span.eco е
+		.main__title_img
+	.main__request
+		//- input(type="text", name="Ваше имя*")
+		//- input#phone.main__request_input(type='tel', placeholder='Ваш телефон*')
+		.input-field
+			input#nam.main__request_input(type='text', required='', spellcheck='false')
+			label Ваше имя*
+		.input-field
+			input#phone.main__request_input(type='text', required='', spellcheck='false')
+			label Ваш телефон*
+		button#request.main__request_button(type='submit')
+			| Оставить заявку
+

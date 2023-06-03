@@ -2,12 +2,10 @@
 $color-header-background: #F7F7F7;
 $primary-color: #243040;
 
-
-
-
 $color-text-h1: #e2e2e2;
 $color-footer-background-color: #f0f0f0;
 $color-href-link: #393939;
+
 
 $color-grey: #e6e8ee;
 $color-wild-sand: #F5F5F5;
@@ -16,9 +14,6 @@ $color-soft-blue: #648DE5;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-mercury: #E8E8E8;
-
-
-
 
 // ==================wood color=====================
 $color-cherry: #b68759;
@@ -29,22 +24,7 @@ $color-walnut:#654321;
 $color-walnut2:#6e4318;
 $color-dark-cherry: #45322e;
 $color-wenge-oak: #48302b;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$color-green: #6ad03c;
 
 
 //- =============== Defalt need css ===============
@@ -55,8 +35,10 @@ $max-width-content: 95vw !default;// параметры по умолчанию
 $title__font-size: 26px !default;
 
 // ======================size of elements================
-$header-desktop__max-height:80px;
-$header-mobile__max-height:64px;
+
+$header-desktop__max-height:150px;
+$header-desktop__max-width: 1350px;
+$header-mobile__max-height:117px;
 $footer-max-height:261px;
 
 $pad-top-el:30px;

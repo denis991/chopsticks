@@ -1,21 +1,22 @@
 .header
-	.header__logo
-		a(href='/')
-			include ../../img/kfpD.svg
-			//- img(src='./img/kfpD.svg' alt='Logo')
-	.header_title
-		|Производственная компания
-		br
-		|деревянных палочек для еды
-	.header_link(href='#')
-		.mobile(hidden)
-			.container-button_open
-				//- .button-opening
-				.icon
-					img(src='/img/menu-icon.svg' width='20px' height='20px' alt='Menu switcher')
-			.header__mobile-modal
-				include ./contactUs
-				.header__dropdown_background
+	.header__container
+		.header__logo
+			//- a(href='/')
+			//- 	include ../../img/kfpD.svg
+				//- img(src='./img/kfpD.svg' alt='Logo')
+		.header_title
+			|Производственная компания
+			br
+			|деревянных палочек для еды
+		.header_more(href='#')
+			.mobile(hidden)
+				.container-button_open
+					//- .button-opening
+					.icon
+						img(src='/img/menu-icon.svg' width='27px' height='24px' alt='Menu switcher')
+				.header__mobile-modal
+					include ./contactUs
+					.header__dropdown_background
 		.desktop(hidden)
 			include ./contactUs
 
