@@ -34,3 +34,14 @@
 		@return $desiredDistance;
 	}
 }
+// текущий отступ
+// максимальный отступ
+// минимальный отступ
+
+// @function gapMargin($size, $max, $min) {
+// 	@if ($size > $max) {
+// 		@return $max;
+// 	} @else {
+// 		@return $size;
+// 	}
+// }
