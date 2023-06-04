@@ -10,11 +10,15 @@
 $with-grid: 1350px;
 $with-grid-child: 1725px;
 $gapProductMarginBlock: calc((100vw - #{$with-grid-child}) / 2);
-$gapProductStart: calc((100vw - $with-grid )/ 5);
+$gapProductStart: calc((100vw - $with-grid) / 5);
 
 // $gapProductEnd: gapMargin($gapProductStart, 45px, 10px);
 
 .product {
+	background:$color-header-background;
+	border-radius: $border-radius $border-radius 0px 0px;
+	margin: 80px 0 160px 0;
+
 	&__title {
 		font-weight: 700;
 		font-size: 48px;
@@ -37,20 +41,21 @@ $gapProductStart: calc((100vw - $with-grid )/ 5);
 		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
-		/* or 133% */
+
 		text-align: center;
+		align-items: center;
+		align-content: center;
 
-	@media (min-width: $with-grid) {
-		grid-gap: 16px $gapProductStart;
+		@media (min-width: $with-grid) {
+			grid-gap: 16px $gapProductStart;
+		}
+		@media (min-width: $with-grid-child) {
+			max-width: 1725px;
+			margin: 0 $gapProductMarginBlock;
+			grid-gap: 22px 45px;
+			grid-template-columns: repeat(5, 1fr);
+		}
 	}
-	@media (min-width: $with-grid-child) {
-		max-width: 1725px;
-		margin: 0 $gapProductMarginBlock;
-		grid-gap: 22px 45px;
-		grid-template-columns: repeat(5, 1fr);
-
-	}
-}
 	&__item {
 		box-sizing: border-box;
 		width: 250px;
@@ -62,8 +67,18 @@ $gapProductStart: calc((100vw - $with-grid )/ 5);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+    justify-content: center;
+
 	}
 	&__item_img {
+		// display: list-item;
+		// min-height: inherit;
+		// min-height: -webkit-fill-available;
+		// display: grid;
+		// align-items: center;
+    // justify-content: center;
+		display: inline-block;
+		vertical-align: middle;
 	}
 	&__item_p {
 		max-width: 208px;
@@ -74,7 +89,24 @@ $gapProductStart: calc((100vw - $with-grid )/ 5);
 		text-align: center;
 		color: $color-acquered-liquorice;
 
+		word-break: break-word;// указывает, что слова могут быть разбиты на части
+		overflow-wrap: break-word; // позволяет переносить слова, если они не помещаются в заданную ширину элемента
+		white-space: normal;//позволяет автоматический перенос текста, когда он не помещается на одну строку
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		// text-align: left;
+		text-align: center;
+
+		margin-top: 60px;
 		margin-left: 10px;
+		&:nth-child(5) {
+			&:after {
+				content: " (" attr(data-extra-content) ")";
+				display: inline;
+			}
+		}
 	}
 	.product__item_img:nth-child(1) {
 		width: 164.35px;
@@ -100,9 +132,11 @@ $gapProductStart: calc((100vw - $with-grid )/ 5);
 	.product__item_img:nth-child(5) {
 		width: 173.66px;
 		height: 116.94px;
+
 	}
 
 	@media screen and (max-width: $width__phone_upper) {
+		margin: 45px 0 50px 0;
 		&__title {
 			font-size: 24px;
 			line-height: 30px;
@@ -125,6 +159,10 @@ $gapProductStart: calc((100vw - $with-grid )/ 5);
 		&__item_img {
 		}
 		&__item_p {
+			margin-top: unset;
+			font-size: 14px;
+			line-height: 19px;
+			max-width: 107px;
 		}
 
 		.product__item_img:nth-child(1) {

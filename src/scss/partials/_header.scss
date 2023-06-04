@@ -16,14 +16,14 @@
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	border-radius: 0px 0px 100px 100px;
+	border-radius: 0px 0px $border-radius $border-radius;
 	gap: 12px;
 	margin: 0 auto;
 }
 // .mobile
 @media screen and (max-width: $width__phone_upper) {
 	.header__container {
-		border-radius: 0px 0px 50px 50px;
+		// border-radius: 0px 0px 50px 50px;
 		height: $header-mobile__max-height;
 	}
 }

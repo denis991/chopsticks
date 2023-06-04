@@ -27,6 +27,13 @@ $color-wenge-oak: #48302b;
 $color-green: #6ad03c;
 
 
+//- ===============  css from js ===============
+$border-radius: var(--border-radius);
+
+
+
+
+
 //- =============== Defalt need css ===============
 $debug: false; // при работе в состоянии разработки и при использовании конструкции if
 // @if ($debug) { border: 1px dotted red;} // визуализация внутренних элементов разметки
