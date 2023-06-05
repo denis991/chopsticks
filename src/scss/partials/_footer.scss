@@ -2,9 +2,11 @@
 	border-radius: $border-radius $border-radius 0px 0px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
+
 	background-color: $color-acquered-liquorice;
 	color: $color-header-background;
+	text-align: center;
+
 
 	&-item {
 		font-weight: 400;
@@ -23,6 +25,39 @@
 	&__vector {
 		background: $color-green;
 		border: 2px solid #ffffff;
+	}
+	.sociallinks{
+		margin: unset ;
+		padding: 0 35px;
+	}
+	@media screen and (max-width: $width__phone_upper) {
+		padding: 29px;
+		display: flex;
+    justify-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+
+		.footer-item:nth-child(-n + 2) {
+			margin: 12px;
+		}
+		.footer-item:nth-child(4) {
+			margin-bottom: 15px;
+		}
+
+		.footer-item:nth-child(-n + 4) {
+
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 180%;
+		}
+		.footer-item:nth-last-child(-n + 3) {
+			font-weight: 400;
+			font-size: 7px;
+			line-height: 160%;
+			gap:0;
+		}
 	}
 }
 

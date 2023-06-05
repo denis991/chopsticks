@@ -86,6 +86,8 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 					background: $color-acquered-liquorice;
 					border-radius: 50px;
 					transition: width 0.3s ease-in-out;
+					transition: background-color 0.3s;
+					border: none;
 
 					&::before {
 						content: 'Оставить заявку';
@@ -99,10 +101,26 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 						transition: width 0.3s ease-in-out;
 					}
 				}
+				&:hover{
+					background: $color-green;
+				}
+
+				&:hover::before{
+					color: $color-acquered-liquorice;
+				}
+
+
+
+
+
+
 			}
 		}
 	}
 }
+
+
+
 //====================== media MOBILE  ======================
 @media screen and (max-width: $width__phone_upper) {
 	.main {
