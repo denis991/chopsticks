@@ -128,7 +128,7 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		&__background {
 			z-index: -1;
 			transform: rotate(1.15deg);
-			background: url('../img/main-chopsticks-phone-512wh-265.png') top center fixed padding-box;
+			background: url('../img/main-chopsticks-phone-512wh-265.png') ;
 			// background: center / contain no-repeat url('../img/main-chopsticks-phone.png') ;
 			background-repeat: no-repeat;
 			background-size: contain;
