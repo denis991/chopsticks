@@ -1,7 +1,10 @@
 .footer {
+	border-radius: $border-radius $border-radius 0px 0px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 10px;
+	background-color: $color-acquered-liquorice;
+	color: $color-header-background;
 
 	&-item {
 		font-weight: 400;
@@ -9,7 +12,11 @@
 		line-height: 180%;
 		grid-column: span 2;
 	}
-
+	.privacy-policy {
+		white-space: nowrap;
+		color: $color-green;
+		text-decoration: underline
+	}
 	&-info {
 		grid-column: 1 / -1;
 	}
@@ -18,7 +25,6 @@
 		border: 2px solid #ffffff;
 	}
 }
-
 
 // /* Footer */
 // .footer {
@@ -36,7 +42,7 @@
 // 		left: 0px;
 // 		top: 3050px;
 
-// 		background: #374146;
+// 		background: $color-acquered-liquorice;
 // 		border-radius: 100px 100px 0px 0px;
 // 	}
 

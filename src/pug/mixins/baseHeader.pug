@@ -3,12 +3,13 @@ mixin metaLink
 
 	link(rel='canonical', href='http://www.chopsticks.ru')
 	link(rel='alternate', href='http://www.chopsticks.ru/en', hreflang='en')
+	//- meta(
+	//- 	name='viewport',
+	//- 	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover'
+	//- )
 	meta(
 		name='viewport',
-		content='width=device-width',
-		initial-scale='1.0 viewport-fit=cover',
-		user-scalable='0',
-		shrink-to-fit='no'
+		content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
 	)
 		//- порядок следующий должен быть
 		//- css -> rel="stylesheet" type="text/css" href="built.css">

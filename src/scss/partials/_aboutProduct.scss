@@ -17,13 +17,16 @@ $gapProductStart: calc((100vw - $with-grid) / 5);
 .product {
 	background:$color-header-background;
 	border-radius: $border-radius $border-radius 0px 0px;
-	margin: 80px 0 160px 0;
+	padding: 80px 0 160px 0;
 
 	&__title {
 		font-weight: 700;
 		font-size: 48px;
 		line-height: 120px;
 		color: $color-acquered-liquorice;
+		margin: 0 auto 40px auto;
+		text-align: center;
+
 	}
 
 	&__list {
@@ -60,7 +63,7 @@ $gapProductStart: calc((100vw - $with-grid) / 5);
 		box-sizing: border-box;
 		width: 250px;
 		height: 581px;
-		border: 2px solid #6ad03c;
+		border: 2px solid $color-green;
 		border-radius: 100px;
 
 		// padding: 10px;
@@ -136,7 +139,7 @@ $gapProductStart: calc((100vw - $with-grid) / 5);
 	}
 
 	@media screen and (max-width: $width__phone_upper) {
-		margin: 45px 0 50px 0;
+		padding: 45px 0 50px 0;
 		&__title {
 			font-size: 24px;
 			line-height: 30px;

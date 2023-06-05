@@ -60,6 +60,7 @@ $font-family: 'Inter', sans-serif;
 // =============== size width or screen view===============
 // нижний и верхний порог lower threshold upper threshold
 
+$width__pc_full:1920px;//PC
 $width__pc:1280px;//PC.
 
 $width__laptop_upper:1279px;
@@ -78,6 +79,7 @@ $width__phone_lower:416px;//Мобильные устройства (альбо�
 $width__phone__small_upper:415px;
 $width__phone__small_lower:320px; //Мобильные устройства (портретная ориентация);
 
+$width__iPhone_13_Pro: 390px;
 // =======================media grоup ============================
 @media  screen, print, (min-width: #{width__pc}) {
 $max-width-content:calc(100vw - 80px);

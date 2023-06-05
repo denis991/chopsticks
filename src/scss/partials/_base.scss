@@ -1,22 +1,25 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
-  height: 100%;
-
+	height: 100%;
 }
 
-
-
-header, body{
+header,
+body {
 	font-size: 16px;
-  // line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  border: 0;
-	font-family: "Montserrat";
+	// line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'Montserrat';
 	font-style: normal;
+}
+body {
+	overflow-x: hidden;
+	// -webkit-overflow-scrolling: touch;
+	max-width: 100vw;
 }

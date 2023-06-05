@@ -1,3 +1,7 @@
+$request-element-width: calc(290px + (398 - 290) * ((100vw - 390px) / (1920 - 390)));
+//108
+$request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) / (1920 - 390)));
+//35.54
 .main {
 	&__background {
 	}
@@ -8,16 +12,33 @@
 			font-size: 90px;
 			line-height: 120px;
 			color: $color-acquered-liquorice;
+			word-wrap: break-word;
+			max-width: 290px;
+			max-height: 120px;
+			margin: 0 auto;
 		}
 		.eco {
 			white-space: nowrap;
-		}
-		&_img {
+			&::after {
+				content: '';
+				position: absolute;
+				width: 43.8px;
+				height: 18.53px;
+				background-image: url('../img/eco.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: 0;
+
+				transform: translateY(0px) rotate(8.4deg);
+			}
 		}
 	}
 
 	&__request {
 		&_input {
+		}
+		.input-field {
+			margin-bottom: 16px;
 		}
 		&_input ~ label {
 			font-weight: 400;
@@ -25,30 +46,82 @@
 			line-height: 180%;
 		}
 		& input {
-			&#nam {
-			}
-
-			&#phone {
-			}
 		}
 
 		& button {
 			&#request {
+				@media screen and (max-width: 390px) {
+					// button#request
+					& {
+						width: 290px;
+					}
+
+					// button#request::before {
+					&::before {
+						width: 126px;
+					}
+				}
+
+				@media screen and (min-width: 391px) and (max-width: $width__pc_full) {
+					// button#request {
+					& {
+						width: $request-element-width;
+					}
+
+					// button#request::before {
+					&::before {
+						// width: calc(126px + (161.54 - 126) * ((100vw - 390px) / (1920 - 390)));
+						width: $request-element_button-before;
+					}
+				}
+				@media (min-width: $width__pc_full) {
+					// button#request {
+					& {
+						width: 398px;
+					}
+				}
+				// button#request {
+				& {
+					height: 50px;
+					background: $color-acquered-liquorice;
+					border-radius: 50px;
+					transition: width 0.3s ease-in-out;
+
+					&::before {
+						content: 'Оставить заявку';
+						display: inline-block;
+						width: 126px;
+						height: 14px;
+						font-weight: 700;
+						font-size: 14px;
+						line-height: 100%;
+						color: $color-white;
+						transition: width 0.3s ease-in-out;
+					}
+				}
 			}
 		}
 	}
 }
+//====================== media MOBILE  ======================
 @media screen and (max-width: $width__phone_upper) {
 	.main {
 		min-height: 584px;
 		&__background {
 			z-index: -1;
 			transform: rotate(1.15deg);
-			background: url('../img/main-chopsticks-phone.png') 0 0 no-repeat;
+			background: url('../img/main-chopsticks-phone-512wh-265.png') top center fixed padding-box;
+			// background: center / contain no-repeat url('../img/main-chopsticks-phone.png') ;
+			background-repeat: no-repeat;
 			background-size: contain;
-			background-position: 0;
-			width: 507.19px;
-			height: 285.53px;
+			background-position: center;
+			// width: 507.19px;
+			// height: 285.53px;
+			width: 100vw;
+			height: calc(100vw / 1.93);
+
+			object-fit: scale-down;
+			margin: 0 auto;
 		}
 
 		&__title {
@@ -59,31 +132,39 @@
 			}
 			.eco {
 				white-space: nowrap;
-			}
-			&_img {
+				&::after {
+					transform: translateY(3px) translateX(-18px) rotate(8.4deg);
+				}
 			}
 		}
 
 		&__request {
+			// max-width: calc(100vw - $request-element-width) ;
+			// margin: 0 auto;
+			display: grid;
+			place-items: center;
+
 			&_input {
-				max-width: 290px;
+				// max-width: 290px;
+			}
+			.input-field {
 			}
 			& input {
-				&#nam {
-				}
-
-				&#phone {
-				}
 			}
 
 			& button {
 				&#request {
+					width: 290px;
+					height: 50px;
+					background: $color-acquered-liquorice;
+					border-radius: 50px;
 				}
 			}
 		}
 	}
 }
 
+//======================  input  ======================
 .input-field {
 	box-sizing: border-box;
 	position: relative;
@@ -98,6 +179,16 @@
 		background: transparent;
 		color: $color-acquered-liquorice;
 		outline: none;
+		transition: width 0.3s ease-in-out;
+		@media screen and (max-width: $width__iPhone_13_Pro) {
+			width: 290px;
+		}
+		@media (min-width: 391px) and (max-width: $width__pc_full) {
+			width: $request-element-width;
+		}
+		@media (min-width: $width__pc_full) {
+			width: 398px;
+		}
 	}
 	label {
 		position: absolute;

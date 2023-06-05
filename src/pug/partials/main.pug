@@ -1,12 +1,14 @@
 .main
-	.main__background
 	.main__title
 		.main__title_text
 			| Палочки для еды
+			br
 			| в брендированной
+			br
 			| эко-упаковк
 			span.eco е
-		.main__title_img
+
+	.main__background
 	.main__request
 		//- input(type="text", name="Ваше имя*")
 		//- input#phone.main__request_input(type='tel', placeholder='Ваш телефон*')
@@ -17,8 +19,3 @@
 			input#phone.main__request_input(type='text', required='', spellcheck='false')
 			label Ваш телефон*
 		button#request.main__request_button(type='submit')
-			| Оставить заявку
-
-//- .input-field
-//- 	input(type='text' required='' spellcheck='false')
-//- 	label Enter email
