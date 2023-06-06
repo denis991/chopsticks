@@ -8,7 +8,8 @@ import {addEventListenerToHeaderPhone} from "./modules/eventListeners.js";
 flsFunctions.isWebp();
 flsFunctions.browserCheck();
 flsFunctions.calculateBorderRadius();
-// flsFunctions.initializeLightSlider();
+flsFunctions.setViewportWidth();
+
 
 addEventListenerToHeaderPhone();
 

@@ -2,7 +2,8 @@
 @mixin setBackgroundImage($image) {
 	background-image: url('../../img/#{$image}');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	background-position: center;
 }
 
 // Определение списка фоновых изображений
@@ -69,24 +70,32 @@ http://stackoverflow.com/a/34696029/383904
 			font-size: 3em;
 		}
 		div {
+			width: $photoWidthMax;
 			height: $photoHeight;
-			width: $photoWidth;
-			max-width: $photoWidthMax;
 
 			@media (max-width: 599px) {
 				width: $phoneWidth;
 				height: $phoneHeight;
 			}
+			.gallery_img {
+				height: $photoHeight;
+				width: $photoWidth;
+				max-width: $photoWidthMax;
 
-			// @each $image in $galleryImages {
-			// 	&:nth-child(#{$index}) {
-			// 		@include setBackgroundImage($image);
-			// 	}
-			// }
-			@each $image in $galleryImages {
-				$index: index($galleryImages, $image);
-				&:nth-child(#{$index}) {
-					@include setBackgroundImage($image);
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+
+				// @each $image in $galleryImages {
+				// 	&:nth-child(#{$index}) {
+				// 		@include setBackgroundImage($image);
+				// 	}
+				// }
+				@each $image in $galleryImages {
+					$index: index($galleryImages, $image);
+					&:nth-child(#{$index}) {
+						@include setBackgroundImage($image);
+					}
 				}
 			}
 		}
@@ -186,6 +195,15 @@ http://stackoverflow.com/a/34696029/383904
 		color: rgba(0, 0, 0, 0.8);
 		text-decoration: none;
 	}
+}
+// если открываем на телефоне - убираем стрелки
+html.mobile .prevNext,
+html.mobile .prevNext > * {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	// display: none !important;
 }
 
 /* ACTIVE */
