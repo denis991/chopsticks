@@ -17,8 +17,9 @@
 			position: fixed;
 			inset: 0px auto auto 0px;
 			transform: translate3d(0vw, 0vw, 0px);
-			width: 343px;
-			height: 236px;
+			height: $width__tablet__mini_lower;
+			width: $width__tablet__mini_lower;
+			border-radius: $border-radius;
 			background: $color-header-background;
 			display: flex;
 			align-items: center;
@@ -37,10 +38,22 @@
 			color: $color-acquered-liquorice;
 		}
 
-		.dropdown_background {
-			width: 102%;
-			height: 100vh;
-			// top: 0;
+		// .dropdown_background {
+		// 	width: 102%;
+		// 	height: 100vh;
+		// 	// top: 0;
+		// 	background-color: rgba(0, 0, 0, 0.3);
+		// 	z-index: 3;
+		// 	opacity: 1;
+		// }
+
+		&::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 			background-color: rgba(0, 0, 0, 0.3);
 			z-index: 3;
 			opacity: 1;
@@ -75,6 +88,40 @@
 
 			&:after {
 				transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+			}
+		}
+		//================= mobile ===================
+		@media screen and (max-width: $width__phone_upper) {
+			.modal-content {
+				height: 100vw;
+				width: 100vw;
+				border-radius: 0px 0px $border-radius $border-radius;
+			}
+		}
+
+		//========================= desktop =======================
+
+		@media screen and (min-width: $width__tablet__mini_lower) {
+			.modal-content {
+				$modal-size-desktop-w: calc( (100vw - #{$width__tablet__mini_lower } ) / 2);
+				$modal-size-desktop-h: calc( (100vh - #{$width__tablet__mini_lower } ) / 2);
+				transform: translate3d($modal-size-desktop-w , $modal-size-desktop-h, 1px);
+			}
+
+		}
+		@media screen and (min-width: $width__pc_full) {
+			.modal-content__text {
+				font-size: 24px;
+				line-height: 38px;
+			}
+
+		}
+
+		//========================= adaptive layout=======================
+		@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full - 1px) {
+			.modal-content__text {
+				font-size: calc((100vw - 600px) / (1920 - 600) * (24 - 16) + 16px);
+				line-height: calc((100vw - 600px) / (1920 - 600) * (38 - 25) + 25px);
 			}
 		}
 	}

@@ -53,120 +53,34 @@
 // font-size: calc( (100vw - 30rem)/(80 - 30) * (1.5 - 1) + 1rem);
 
 @function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
-  $f-min: strip-unit($f-min);
-  $f-max: strip-unit($f-max);
-  $w-min: strip-unit($w-min);
-  $w-max: strip-unit($w-max);
+	$f-min: strip-unit($f-min);
+	$f-max: strip-unit($f-max);
+	$w-min: strip-unit($w-min);
+	$w-max: strip-unit($w-max);
 
-  // $k: ($f-max - $f-min)/($w-max - $w-min);// Расчет коэффициента
-  // $b: $f-min - $k * $w-min;// Расчет свободного члена
+	// $k: ($f-max - $f-min)/($w-max - $w-min);// Расчет коэффициента
+	// $b: $f-min - $k * $w-min;// Расчет свободного члена
 
-  // $b: $b + $units; // Добавление единиц измерения к свободному члену
+	// $b: $b + $units; // Добавление единиц измерения к свободному члену
 
-  // @return calc( #{$k} * 100vw + #{$b} );
-  @return calc((100vw - #{$w-min + $units}) / (#{$w-max} - #{$w-min}) * (#{$f-max} - #{$f-min}) + #{$f-min + $units});
-	 // Возврат выражения calc() с использованием коэффициента и свободного члена
+	// @return calc( #{$k} * 100vw + #{$b} );
+	@return calc(
+		(100vw - #{$w-min + $units}) / (#{$w-max} - #{$w-min}) * (#{$f-max} - #{$f-min}) + #{$f-min +
+			$units}
+	);
+	// Возврат выражения calc() с использованием коэффициента и свободного члена
 
-				// font-size: calcFluidFontSize( 28px, 90px ,$width__tablet__mini_lower, $width__pc_full);
+	// font-size: calcFluidFontSize( 28px, 90px ,$width__tablet__mini_lower, $width__pc_full);
 }
 
+//================= mobile ===================
+@media screen and (max-width: $width__phone_upper) {
+}
 
+//========================= desktop =======================
+@media screen and (min-width: $width__pc_full) {
+}
 
-
-// ----------------------------
-
-
-// текущий отступ
-// максимальный отступ
-// минимальный отступ
-
-// @function gapMargin($size, $max, $min) {
-// 	@if ($size > $max) {
-// 		@return $max;
-// 	} @else {
-// 		@return $size;
-// 	}
-// }
-
-// не работает потом исправавить
-// @function calculateBorderRadius() {
-//   $minWidth: 390; // Минимальная ширина экрана
-//   $maxWidth: 1920; // Максимальная ширина экрана
-//   $minRadius: 50; // Минимальное значение закругления
-//   $maxRadius: 100; // Максимальное значение закругления
-//   $viewportWidth: var(--viewport-width);
-
-//   $calculation: $minRadius + (($maxRadius - $minRadius) * ($viewportWidth - $minWidth)) / ($maxWidth - $minWidth);
-//   @return $calculation + 'px';
-// }
-// // $border-radius: calculateBorderRadius();
-// :root {
-//   --border-radius: #{calculateBorderRadius()};
-// 	// @include calculateBorderRadius();
-// }
-// // $border-radius: var(--border-radius);
-
-// напиши как плавно изменять шрифт и его параменты }
-// и иконку для текста чтобы она плавно уменьшалась и на ходилась на краю буквы "Е"
-
-// то-есть функцию напиши !!!
-
-// ---------------------------------------------------------------
-// не работает потом исправавить
-
-// .main {
-// 	&_text {
-// 		font-weight: 600;
-// 		font-size: calc(90px - 62px * (100vw - 600px) / 1320);
-// 		line-height: calc(120px - 80px * (100vw - 600px) / 1320);
-// 		width: calc(1148px - 558px * (100vw - 600px) / 1320);
-// 		height: calc(360px - 210px * (100vw - 600px) / 1320);
-// 	}
-
-// 	.eco::after {
-// 		width: calc(118.2px - 74.4px * (100vw - 600px) / 1320);
-// 		height: calc(50px - 31.4px * (100vw - 600px) / 1320);
-// 		transform: translateY(8px) translateX(calc(-61px + 39px * (100vw - 600px) / 1320))
-// 			rotate(8.4deg);
-// 	}
-// }
-
-// @function calculateFontSize($minFontSize, $maxFontSize) {
-// 	$maxViewport: 1920px;
-// 	$minViewport: 600px;
-// 	$fontSizeRange: $maxFontSize - $minFontSize;
-// 	$viewportRange: $maxViewport - $minViewport;
-// 	$fontSizeStep: $fontSizeRange / $viewportRange;
-
-// 	$res: calc($minFontSize + ($viewport-width - $minViewport) * $fontSizeStep);
-
-// 	@return $res;
-// }
-
-// .main__title {
-// 	font-weight: 600;
-// 	font-size: calculateFontSize(28, 90) * 1px;
-// 	line-height: calculateFontSize(40, 120) * 1px;
-// 	transition: font-size 0.3s ease-in-out, line-height 0.3s ease-in-out;
-
-// 	max-width: calculateFontSize(290, 1148) * 1px;
-// 	max-height: calculateFontSize(120, 360) * 1px;
-
-// 	&_text {
-// 		font-weight: 600;
-// 		font-size: calculateFontSize(28, 90) * 1px;
-// 		line-height: calculateFontSize(40, 120) * 1px;
-// 		transition: font-size 0.3s ease-in-out, line-height 0.3s ease-in-out;
-
-// 		max-width: calculateFontSize(290, 1148) * 1px;
-// 		max-height: calculateFontSize(120, 360) * 1px;
-// 	}
-
-// 	.eco::after {
-// 		width: calculateFontSize(43.8, 118.2) * 1px;
-// 		height: calculateFontSize(18.53, 50) * 1px;
-// 		transform: translateY(calculateFontSize(3, 8) * 1px)
-// 			translateX(calculateFontSize(-18, -61) * 1px) rotate(8.4deg);
-// 		transition: width 0.3s ease-in-out, height 0.3s ease-in-out, transform 0.3s ease-in-out;
-// 	}
-// }
+//========================= adaptive layout=======================
+@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full - 1px) {
+}

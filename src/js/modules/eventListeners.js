@@ -48,6 +48,13 @@ button.addEventListener('click', openModal);
 
 const closeButton = document.querySelector('.modal-close-button');
 closeButton.addEventListener('click', closeModal);
+
+const modalContainer = document.querySelector('.modal-container');
+  modalContainer.addEventListener('click', function (event) {
+    if (event.target === modalContainer) {
+      closeModal();
+    }
+  });
 }
 
 //=================== вызов функций ===================
