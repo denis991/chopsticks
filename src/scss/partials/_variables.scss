@@ -65,7 +65,8 @@ $font-family: 'Inter', sans-serif;
 // =============== size width or screen view===============
 // нижний и верхний порог lower threshold upper threshold
 
-$width__pc_full:1920px;//PC
+$width__pc_full:1920px;//PC hd
+$width__pc_old: 1450px;//PC  old monitor
 $width__pc:1280px;//PC.
 
 $width__laptop_upper:1279px;

@@ -1,3 +1,6 @@
+@import 'pop-pup';
+
+
 $request-element-width: calc(290px + (398 - 290) * ((100vw - 390px) / (1920 - 390)));
 //108
 $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) / (1920 - 390)));
@@ -163,14 +166,12 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		// }
 		&:not(.mobile) {
 			background: url('../img/main-chopsticks-x2.png');
-			background-attachment: fixed;
+			// background-attachment: fixed;
 			background-repeat: no-repeat;
 			background-size: 38vw;
 			// background-position: right 50% bottom 0%;
-			// background-position-y: bottom;
-			// background-position-x: 87.24vw;
-			background-position-y: 8vw;
-			background-position-x: 60.239999999999995vw;
+			background-position-y: 0vw;
+			background-position-x: 48.24000000000001vw;
 			background-origin: content-box;
 		}
 
@@ -209,6 +210,7 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		}
 
 		//1920
+		// background-attachment: fixed;
 		// background-position-y: 8vw;
 		// background-position-x: 60.239999999999995vw;
 	}

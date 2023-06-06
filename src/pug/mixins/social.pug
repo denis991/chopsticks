@@ -7,12 +7,22 @@ mixin sociallinks
 			.sociallinks_item
 				a(href='https://wa.me/79182475756', target='_blank')
 					include ../../img/whatsApp.svg
-mixin sociallinksOld
-	.contact__sociallinks
-		.contact__sociallinks_wrapper
-			.contact__sociallinks_item
-				a(href='https://t.me/d9911', target='_blank')
-					include ../../img/telegram.svg
-			.contact__sociallinks_item
-				a(href='https://wa.me/79182475756', target='_blank')
-					include ../../img/whatsApp.svg
+//- mixin sociallinksOld
+//- 	.contact__sociallinks
+//- 		.contact__sociallinks_wrapper
+//- 			.contact__sociallinks_item
+//- 				a(href='https://t.me/d9911', target='_blank')
+//- 					include ../../img/telegram.svg
+//- 			.contact__sociallinks_item
+//- 				a(href='https://wa.me/79182475756', target='_blank')
+//- 					include ../../img/whatsApp.svg
+mixin pop-up
+	.modal-container
+		.modal-content
+			.modal-close-button
+			.modal-content__text
+				| Спасибо!
+				br
+				| Ваша заявка отправлена.
+				| В ближайшее время мы свяжемся с вами.
+		.dropdown_background
