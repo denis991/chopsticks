@@ -118,10 +118,13 @@
 		}
 
 		//========================= adaptive layout=======================
-		@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full - 1px) {
+		@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full) {
+
 			.modal-content__text {
 				font-size: calc((100vw - 600px) / (1920 - 600) * (24 - 16) + 16px);
 				line-height: calc((100vw - 600px) / (1920 - 600) * (38 - 25) + 25px);
+				width: calc((100vw - 600px) / (1920 - 600) * (298 - 237) + 237px);
+				height: calc((100vw - 600px) / (1920 - 600) * (165 - 124) + 124px);
 			}
 		}
 	}

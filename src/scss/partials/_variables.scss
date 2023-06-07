@@ -49,6 +49,9 @@ $title__font-size: 26px !default;
 // ======================size of elements================
 
 $header-desktop__max-height:150px;
+$header-desktop__max-height_old: 300px;
+
+
 $header-desktop__max-width: 1350px;
 $header-mobile__max-height:117px;
 $footer-max-height:261px;
@@ -64,6 +67,7 @@ $font-family: 'Inter', sans-serif;
 
 // =============== size width or screen view===============
 // нижний и верхний порог lower threshold upper threshold
+$fix-element-width_old: 880px; ///old monitor 
 
 $width__pc_full:1920px;//PC hd
 $width__pc_old: 1450px;//PC  old monitor
@@ -86,44 +90,6 @@ $width__phone__small_upper:415px;
 $width__phone__small_lower:320px; //Мобильные устройства (портретная ориентация);
 
 $width__iPhone_13_Pro: 390px;
-// =======================media grоup ============================
-@media  screen, print, (min-width: #{width__pc}) {
-$max-width-content:calc(100vw - 80px);
-$title__font-size: 42px;
-};
-
-@media screen and (min-width: #{width__laptop_lower}) and (max-width: #{width__laptop_upper}) {
-  $max-width-content:calc(100vw - 60px);
-  $title__font-size: 38px;
-};
-
-@media screen and (min-width: #{width__tablet_lower}) and (max-width: #{width__tablet_upper}) {
-  $max-width-content:calc(100vw - 40px);
-  $title__font-size: 34px;
-};
-@media screen  and (min-width: #{width__tablet_lower}) {
-  $isMomile:0;
-
-  }
-//==================modile version=====================
-
-@media screen  and (max-width: #{width__tablet__mini_upper}) {
-$isMomile:1;
-
-}
-@media screen and (min-width: #{width__tablet__mini_lower}) and (max-width: #{width__tablet__mini_upper}) {
-  $max-width-content:calc(100vw - 30px);
-  $title__font-size: 32px;
-};
-
-@media screen and (min-width: #{width__phone_lower}) and (max-width: #{width__phone_upper}) {
-  $max-width-content:calc(100vw - 20px);
-  $title__font-size: 30px;
-};
-
-@media screen and (max-width:#{width__phone__small_lower}) {
-  $max-width-content:calc(100vw - 10px);
-  $title__font-size: 26px;
-};
-
+$width__iPhone_13_Pro_Max: 428px;
+$width__iPhone_13_Mini: 360px;
 

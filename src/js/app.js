@@ -8,7 +8,7 @@ import {addEventListenerToHeaderPhone} from "./modules/eventListeners.js";
 flsFunctions.isWebp();
 flsFunctions.browserCheck();
 flsFunctions.calculateBorderRadius();
-flsFunctions.setViewportWidth();
+// flsFunctions.setViewportWidth();
 
 
 addEventListenerToHeaderPhone();

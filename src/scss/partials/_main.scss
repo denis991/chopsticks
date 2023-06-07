@@ -1,6 +1,5 @@
 @import 'pop-pup';
 
-
 $request-element-width: calc(290px + (398 - 290) * ((100vw - 390px) / (1920 - 390)));
 //108
 $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) / (1920 - 390)));
@@ -59,7 +58,7 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		}
 		& input {
 		}
-
+		// =================== button ====================
 		& button {
 			&#request {
 				@media screen and (max-width: 390px) {
@@ -181,13 +180,20 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 			grid-row: 3;
 			grid-column: 1;
 			// margin-top: 518px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-content: center;
+			align-items: center;
 		}
 	}
 }
 
-@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full - 1px) {
+@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full) {
 	.main {
+		padding-left: calc((100vw - 600px) / (1920 - 600) * (245 - 10) + 10px); //12.76vw
 		&__title {
+			margin-top: calc((100vw - 600px) / (1920 - 600) * (109 - 10) + 10px);
 			&_text {
 				font-size: calc((100vw - 600px) / (1920 - 600) * (90 - 28) + 28px);
 				line-height: calc((100vw - 600px) / (1920 - 600) * (120 - 40) + 40px);
@@ -195,14 +201,6 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 					content: '';
 					width: calc((100vw - 600px) / (1920 - 600) * (118.2 - 43.8) + 43.8px);
 					height: calc((100vw - 600px) / (1920 - 600) * (50 - 18.53) + 18.53px);
-					transform: calcFluidTransform(
-						-18px,
-						-61px,
-						3px,
-						8px,
-						390px,
-						1920px
-					); // Пример использования функции с вашими параметрами
 					transform: translateY(calc((100vw - 600px) / (1920 - 600) * (8 - 3) + 3px))
 						translateX(calc((100vw - 600px) / (1920 - 600) * (-61 - -18) + -18px)) rotate(8.4deg);
 				}
@@ -213,12 +211,27 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		// background-attachment: fixed;
 		// background-position-y: 8vw;
 		// background-position-x: 60.239999999999995vw;
+
+		&__request {
+			margin-top: calc((100vw - 600px) / (1920 - 600) * (0 - -230) + -230px);
+			width: $request-element-width;
+			.input-field {
+				margin-bottom: calc((100vw - 600px) / (1920 - 600) * (16 - 2) + 2px); // 2px;
+			}
+		}
 	}
 }
+
+// @media (min-width: $width__tablet__mini_lower) and (max-width: $fix-element-width_old) {
+// }
+
 //====================== media MOBILE  ======================
 @media screen and (max-width: $width__phone_upper) {
 	.main {
 		min-height: 584px;
+		@media (min-width: $width__iPhone_13_Pro) {
+			min-height: calc((100vw - 390px) / (600 - 390) * (650 - 584) + 584px);
+		}
 		&__background {
 			z-index: -1;
 			transform: rotate(1.15deg);
@@ -256,8 +269,6 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		}
 
 		&__request {
-			// max-width: calc(100vw - $request-element-width) ;
-			// margin: 0 auto;
 			display: grid;
 			place-items: center;
 
@@ -265,8 +276,9 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 				// max-width: 290px;
 			}
 			.input-field {
-			}
-			& input {
+				& input {
+					width: 290px; 
+				}
 			}
 
 			& button {

@@ -1,18 +1,17 @@
 include ../mixins/element.pug
 footer.footer
-	.footer-item.footer-info
+	.footer-item.footer-info.left-align
 		| © Костромская фабрика палочек 2016-#{ (new Date()).getFullYear() }
-	+sociallinks
-	.footer-item
+	+sociallinks('/#',data)(class='social')
+	.footer-item.right-align
 		| ИНН 440122483129 ОГРНИП 316440100064897
-	.footer-item
+		br
 		| ИП Ермолов Алексей Александрович
-
-	.footer-item
+	.footer-item.left-align
 		| * Отправляя форму, вы даете согласие на обработку своих персональных данных и соглашаетесь с&nbsp
 		span.privacy-policy
-			|политикой конфиденциальности
-	.footer-item
+			| политикой конфиденциальности
+	.footer-item.right-align
 		| Приведенная выше информация носит справочный характер и не является публичной офертой.
-	.footer-item
+		br
 		| Подробную информацию уточняйте в отделе продаж.

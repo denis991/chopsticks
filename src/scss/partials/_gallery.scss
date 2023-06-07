@@ -58,7 +58,7 @@ http://stackoverflow.com/a/34696029/383904
 		line-height: 120px;
 		color: $color-acquered-liquorice;
 	}
-	@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full - 1px) {
+	@media screen and (min-width: $width__tablet__mini_lower) and (max-width: $width__pc_full ) {
 		height: calc((100vw - 600px) / (1920 - 600) * (207 - 79) + 79px);
 		&_text {
 			font-size: calc((100vw - 600px) / (1920 - 600) * (48 - 24) + 24px);

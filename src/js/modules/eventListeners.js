@@ -43,6 +43,7 @@ function closeModal() {
 
 
 const addEventListenerPopPup = () => {
+	setTimeout(() => {
 const button = document.getElementById('request');
 button.addEventListener('click', openModal);
 
@@ -55,6 +56,7 @@ const modalContainer = document.querySelector('.modal-container');
       closeModal();
     }
   });
+	}, 500);
 }
 
 //=================== вызов функций ===================
