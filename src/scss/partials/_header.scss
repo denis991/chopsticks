@@ -30,6 +30,7 @@
 // $header-desktop__max-width
 .header__logo {
 	background: url('../img/kfpD.svg') no-repeat;
+	// background: url('../img/kfp-new-v.svg') no-repeat;
 	background-position: center;
 	background-size: 100%;
 	width: 105.08px;
@@ -41,7 +42,7 @@
 	.header__logo {
 		width: 80px;
 		height: 51px;
-		margin: sizeObjectFun($header-mobile__max-height, 67.79px, 19px) 0 auto 0;
+		// margin: sizeObjectFun($header-mobile__max-height, 67.79px, 19px) 0 auto 0;
 	}
 }
 .header_title {

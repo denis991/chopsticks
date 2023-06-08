@@ -10,10 +10,10 @@
 	.main__background
 	.main__request
 		.input-field
-			input#nam.main__request_input(type='text', required='', spellcheck='false')
-			label Ваше имя*
+			input#nam.main__request_input(type='text', required='', spellcheck='false', placeholder="Ваше имя*")
+			//- label Ваше имя*
 		.input-field
-			input#phone.main__request_input(type='text', required='', spellcheck='false')
-			label Ваш телефон*
+			input#phone.main__request_input(type='text', required='', spellcheck='false', placeholder="Ваш телефон*")
+			//- label Ваш телефон*
 		button#request.main__request_button(type='submit')
 	+pop-up

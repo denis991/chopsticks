@@ -322,26 +322,26 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 			width: 398px;
 		}
 	}
-	label {
-		position: absolute;
-		top: 50%;
-		left: 15px;
-		transform: translateY(-50%);
-		color: $color-grey;
-		font-size: 19px;
-		pointer-events: none;
-		transition: 0.3s;
-	}
+	// label {
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 15px;
+	// 	transform: translateY(-50%);
+	// 	color: $color-grey;
+	// 	font-size: 19px;
+	// 	pointer-events: none;
+	// 	transition: 0.3s;
+	// }
 	input:focus {
 		border: 2px solid $color-green;
 	}
-	input:focus ~ label,
-	input:valid ~ label {
-		font-family: 'Poppins', sans-serif;
-		top: 0;
-		left: 15px;
-		font-size: 16px;
-		padding: 0 2px;
-		background: $color-white;
-	}
+	// input:focus ~ label,
+	// input:valid ~ label {
+	// 	font-family: 'Poppins', sans-serif;
+	// 	top: 0;
+	// 	left: 15px;
+	// 	font-size: 16px;
+	// 	padding: 0 2px;
+	// 	background: $color-white;
+	// }
 }
