@@ -7,8 +7,8 @@ import {addEventListenerToHeaderPhone} from "./modules/eventListeners.js";
 /* (i) необходимо для корректного отображения webp из css  */
 flsFunctions.isWebp();
 flsFunctions.browserCheck();
-flsFunctions.calculateBorderRadius();
-// flsFunctions.setViewportWidth();
+// flsFunctions.calculateBorderRadius();
+flsFunctions.setViewportWidth();
 
 
 addEventListenerToHeaderPhone();

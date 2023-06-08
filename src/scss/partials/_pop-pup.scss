@@ -19,7 +19,7 @@
 			transform: translate3d(0vw, 0vw, 0px);
 			height: $width__tablet__mini_lower;
 			width: $width__tablet__mini_lower;
-			border-radius: $border-radius;
+			// border-radius: $border-radius;
 			background: $color-header-background;
 			display: flex;
 			align-items: center;
@@ -95,7 +95,7 @@
 			.modal-content {
 				height: 100vw;
 				width: 100vw;
-				border-radius: 0px 0px $border-radius $border-radius;
+				// border-radius: 0px 0px $border-radius $border-radius;
 			}
 		}
 

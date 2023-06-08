@@ -15,3 +15,5 @@ src/js/modules/functions.js
 package-lock.json
 
 src/img
+/photos
+*Old

@@ -14,6 +14,8 @@ $color-soft-blue: #648DE5;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-mercury: #E8E8E8;
+$color-green: #6ad03c;
+$color-grey: #A1A1A1;
 
 // ==================wood color=====================
 $color-cherry: #b68759;
@@ -24,7 +26,6 @@ $color-walnut:#654321;
 $color-walnut2:#6e4318;
 $color-dark-cherry: #45322e;
 $color-wenge-oak: #48302b;
-$color-green: #6ad03c;
 
 // ============== galary color ====================
 $page-gallery-button: #D9D9D9;
@@ -67,7 +68,7 @@ $font-family: 'Inter', sans-serif;
 
 // =============== size width or screen view===============
 // нижний и верхний порог lower threshold upper threshold
-$fix-element-width_old: 880px; ///old monitor 
+$fix-element-width_old: 880px; ///old monitor
 
 $width__pc_full:1920px;//PC hd
 $width__pc_old: 1450px;//PC  old monitor
@@ -93,3 +94,31 @@ $width__iPhone_13_Pro: 390px;
 $width__iPhone_13_Pro_Max: 428px;
 $width__iPhone_13_Mini: 360px;
 
+
+
+// переносим пк
+.mobile .white-normal_desktop{
+  white-space: nowrap;
+}
+.white-normal_desktop{
+	white-space: normal; // Переносить текст
+}
+
+//переносим текст в телефоне
+.mobile .white-normal_mobile{
+	white-space: normal; // Переносить текст
+}
+.white-normal_mobile{
+
+  white-space: nowrap;
+}
+
+.left-align {
+	text-align: left;
+	justify-self: start;
+}
+
+.right-align {
+	text-align: right;
+	justify-self: end;
+}

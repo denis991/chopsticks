@@ -26,6 +26,7 @@
 	"license": "ISC",
 	"scripts": {
 		"dev": "gulp",
+		"devNoWebp": "gulp --no-webp",
 		"build": "gulp build --build",
 		"zip": "gulp deployZIP --build",
 		"deploy": "gulp deployFTP --build",

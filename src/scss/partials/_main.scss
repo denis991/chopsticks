@@ -60,6 +60,9 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		}
 		// =================== button ====================
 		& button {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 0%;
 			&#request {
 				@media screen and (max-width: 390px) {
 					& {
@@ -277,7 +280,7 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 			}
 			.input-field {
 				& input {
-					width: 290px; 
+					width: 290px;
 				}
 			}
 
@@ -324,7 +327,7 @@ $request-element_button-before: calc(126px + (161.54 - 126) * ((100vw - 390px) /
 		top: 50%;
 		left: 15px;
 		transform: translateY(-50%);
-		color: $color-acquered-liquorice;
+		color: $color-grey;
 		font-size: 19px;
 		pointer-events: none;
 		transition: 0.3s;

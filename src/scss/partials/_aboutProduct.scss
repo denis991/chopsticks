@@ -158,10 +158,13 @@ $gapProductStart: calc((100vw - $with-grid) / 5);
 
 			flex-direction: row;
 			align-items: center;
+			justify-content: space-evenly;
 		}
 		&__item_img {
 		}
 		&__item_p {
+			text-align: left;
+			justify-self: start;
 			margin-top: unset;
 			font-size: 14px;
 			line-height: 19px;
