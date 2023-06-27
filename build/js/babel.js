@@ -1,0 +1,6 @@
+
+/*  chopsticks v 1.0.01 | by Clake
+* Copyright (c) 2023 Clake,
+* Tue Jun 27 2023 17:07:23 GMT+0300 (Москва, стандартное время)
+*/
+!function(){"use strict";function e(t){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(t)}var t=function(t,r){if(t&&t.__esModule)return t;if(null===t||"object"!==e(t)&&"function"!=typeof t)return{default:t};var o=n(r);if(o&&o.has(t))return o.get(t);var u={},f=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var i in t)if("default"!==i&&Object.prototype.hasOwnProperty.call(t,i)){var c=f?Object.getOwnPropertyDescriptor(t,i):null;c&&(c.get||c.set)?Object.defineProperty(u,i,c):u[i]=t[i]}return u.default=t,o&&o.set(t,u),u}(require("./modules/functions.js")),r=require("./modules/eventListeners.js");function n(e){if("function"!=typeof WeakMap)return null;var t=new WeakMap,r=new WeakMap;return(n=function(e){return e?r:t})(e)}t.isWebp(),t.browserCheck(),t.setViewportWidth(),(0,r.addEventListenerToHeaderPhone)(),self.Lumino={}.default}();
